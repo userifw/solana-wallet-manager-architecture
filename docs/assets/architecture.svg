@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="650" viewBox="0 0 1400 650">
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;fill:#172033}.title{font-size:34px;font-weight:700}.sub{font-size:17px;fill:#64748b}.h{font-size:22px;font-weight:700}.t{font-size:15px}.small{font-size:13px;fill:#475569}.box{rx:18;stroke-width:2}.arrow{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#a)}
+</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+<rect width="1400" height="650" fill="#fff"/>
+<text x="700" y="55" text-anchor="middle" class="title">MMCP Solana Wallet Manager — Architecture</text>
+<text x="700" y="85" text-anchor="middle" class="sub">Secure wallet infrastructure · financial integrity · reconciliation · Guardian Nodes</text>
+
+<rect class="box" x="40" y="140" width="280" height="370" fill="#eff6ff" stroke="#3b82f6"/>
+<text x="180" y="180" text-anchor="middle" class="h">Mentor</text>
+<text x="180" y="205" text-anchor="middle" class="small">MMCP Solana Wallet Manager</text>
+<text x="70" y="250" class="t">FinancialOperation</text><text x="70" y="282" class="t">Atomic Reservation</text>
+<text x="70" y="314" class="t">TransactionAttempt</text><text x="70" y="346" class="t">Append-only Ledger</text>
+<text x="70" y="378" class="t">Reconciliation</text><text x="70" y="410" class="t">Recovery</text>
+<text x="70" y="442" class="t">Alerts &amp; Monitoring</text><text x="70" y="474" class="t">Admin / Manual Review</text>
+
+<rect class="box" x="410" y="140" width="280" height="370" fill="#f0fdf4" stroke="#22c55e"/>
+<text x="550" y="180" text-anchor="middle" class="h">Guardian Node</text>
+<text x="550" y="205" text-anchor="middle" class="small">Remote signer on predefined VPS</text>
+<text x="440" y="250" class="t">Mentor authentication</text><text x="440" y="282" class="t">Replay protection</text>
+<text x="440" y="314" class="t">Local encrypted keys</text><text x="440" y="346" class="t">1,000+ local wallets</text>
+<text x="440" y="378" class="t">SOL / SPL signing</text><text x="440" y="410" class="t">Transaction submission</text>
+<text x="440" y="442" class="t">Append-only local audit</text><text x="440" y="474" class="t">Heartbeat / health</text>
+
+<rect class="box" x="780" y="140" width="240" height="370" fill="#faf5ff" stroke="#8b5cf6"/>
+<text x="900" y="180" text-anchor="middle" class="h">Solana</text>
+<text x="900" y="205" text-anchor="middle" class="small">Mainnet / Devnet</text>
+<text x="810" y="265" class="t">Signed transactions</text><text x="810" y="305" class="t">Token accounts</text>
+<text x="810" y="345" class="t">Public signatures</text><text x="810" y="385" class="t">On-chain balances</text>
+<text x="810" y="425" class="t">Immutable history</text><text x="810" y="465" class="t">RPC verification</text>
+
+<rect class="box" x="1110" y="140" width="250" height="370" fill="#fffbeb" stroke="#f59e0b"/>
+<text x="1235" y="180" text-anchor="middle" class="h">Reconciliation</text>
+<text x="1235" y="205" text-anchor="middle" class="small">Independent verification</text>
+<text x="1140" y="250" class="t">Signature-first lookup</text><text x="1140" y="282" class="t">Match economic intent</text>
+<text x="1140" y="314" class="t">Confirmed / Unknown</text><text x="1140" y="346" class="t">Mismatch → Review</text>
+<text x="1140" y="378" class="t">Settlement / Release</text><text x="1140" y="410" class="t">Double-credit guard</text>
+<text x="1140" y="442" class="t">External movement detection</text><text x="1140" y="474" class="t">Recovery &amp; alerts</text>
+
+<path class="arrow" d="M320 285 H400"/><text x="360" y="265" text-anchor="middle" class="small">authenticated</text>
+<path class="arrow" d="M690 325 H770"/><text x="730" y="305" text-anchor="middle" class="small">signed tx</text>
+<path class="arrow" d="M1020 325 H1100"/><text x="1060" y="305" text-anchor="middle" class="small">chain data</text>
+<path class="arrow" d="M1110 500 C950 590 410 590 250 520"/><text x="700" y="585" text-anchor="middle" class="small">confirmed state → Mentor updates ledger and UI</text>
+
+<text x="700" y="625" text-anchor="middle" class="sub">Private keys never leave Guardian nodes · timeout ≠ failure · no blind resend · chain-verified settlement</text>
+</svg>
