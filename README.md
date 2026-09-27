@@ -1,5 +1,7 @@
 # Solana Wallet Manager Architecture
 
+![MMCP Solana Wallet Manager architecture](docs/assets/architecture.svg)
+
 Production-oriented architecture for secure Solana wallet management, SPL transfers, financial integrity, reconciliation, failure recovery, and distributed signing.
 
 This repository is a **sanitized architecture case study**. Production source code, private operational data, wallet secrets, infrastructure credentials, and internal logs are intentionally not published.
